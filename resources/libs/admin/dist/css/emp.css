@@ -1,0 +1,119 @@
+.scroll-to-top {
+    position: fixed;
+    right: 15px;
+    bottom: 3px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: white;
+    background: rgba(52, 58, 64, 0.5);
+    line-height: 45px;
+  }
+  
+.scroll-to-top:focus, .scroll-to-top:hover {
+color: white;
+}
+
+.scroll-to-top:hover {
+background: #343a40;
+}
+
+.scroll-to-top i {
+font-weight: 800;
+}
+
+.smaller {
+font-size: 0.7rem;
+}
+
+/* Checkbox and Radio buttons */
+.form-group input[type="radio"],
+.form-group input[type="checkbox"]{
+	display: none;
+}
+
+.form-group input[type="checkbox"] + .btn-group > label,
+.form-group input[type="radio"] + .btn-group > label{
+	white-space: normal;
+}
+
+.form-group input[type="checkbox"] + .btn-group > label.btn-default,
+.form-group input[type="radio"] + .btn-group > label.btn-default{
+	color: #333;
+	background-color: #fff;
+	border-color: #ccc;
+}
+.form-group input[type="checkbox"] + .btn-group > label.btn-primary,
+.form-group input[type="radio"] + .btn-group > label.btn-primary{
+	color: #fff;
+	background-color: #428bca;
+	border-color: #357ebd;
+}
+.form-group input[type="checkbox"] + .btn-group > label.btn-success,
+.form-group input[type="radio"] + .btn-group > label.btn-success{
+	color: #fff;
+	background-color: #5cb85c;
+	border-color: #4cae4c;
+}
+.form-group input[type="checkbox"] + .btn-group > label.btn-info,
+.form-group input[type="radio"] + .btn-group > label.btn-info{
+	color: #fff;
+	background-color: #5bc0de;
+	border-color: #46b8da;
+}
+.form-group input[type="checkbox"] + .btn-group > label.btn-warning,
+.form-group input[type="radio"] + .btn-group > label.btn-warning{
+	color: #000;
+	background-color: #ffbe00;
+	border-color: #ffbe00;
+}
+.form-group input[type="checkbox"] + .btn-group > label.btn-danger,
+.form-group input[type="radio"] + .btn-group > label.btn-danger{
+	color: #fff;
+	background-color: #d9534f;
+	border-color: #d43f3a;
+}
+.form-group input[type="checkbox"] + .btn-group > label.btn-link,
+.form-group input[type="radio"] + .btn-group > label.btn-link {
+	font-weight: normal;
+	color: #428bca;
+	border-radius: 0;
+}
+
+.form-group input[type="radio"] + .btn-group > label span:first-child,
+.form-group input[type="checkbox"] + .btn-group > label span:first-child{
+	display: none;
+}
+
+.form-group input[type="radio"] + .btn-group > label span:first-child + span,
+.form-group input[type="checkbox"] + .btn-group > label span:first-child + span{
+	display: inline-block;
+}
+
+.form-group input[type="radio"]:checked + .btn-group > label span:first-child,
+.form-group input[type="checkbox"]:checked + .btn-group > label span:first-child{
+	display: inline-block;
+}
+
+.form-group input[type="radio"]:checked + .btn-group > label span:first-child + span,
+.form-group input[type="checkbox"]:checked + .btn-group > label span:first-child + span{
+	display: none;  
+}
+
+.form-group input[type="checkbox"] + .btn-group > label span[class*="fa-"],
+.form-group input[type="radio"] + .btn-group > label span[class*="fa-"]{
+	width: 15px;
+	float: left;
+	margin: 4px 0 2px -2px;
+}
+
+.form-group input[type="checkbox"] + .btn-group > label span.content,
+.form-group input[type="radio"] + .btn-group > label span.content{
+	margin-left: 10px;
+}
+/* End::Checkbox and Radio buttons */
+
+.ui.label { background-color: #EEE; color: #666 !important; font-size: 13px; }
+.ui.label .icon:before { content: '\f00d'; font-family: fontAwesome; font-style: normal; font-size: 12px; padding-left: 5px; position: relative; top: -1px; }
+.ui.label .icon:hover:before { color: #F00; }
