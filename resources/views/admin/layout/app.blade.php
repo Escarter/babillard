@@ -7,9 +7,13 @@
 
  <!-- Content section -->
 <div class="content-wrapper">
-    <div class="container-fluid mt-2">
+    <div class="container-fluid mt-4">
         @yield('admin-content')
+
+            {{--  include footer  --}}
+    @include('layouts.footer')
     </div>
+
 </div>
 
 @stop

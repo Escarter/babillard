@@ -14,4 +14,14 @@ class Ecole extends Model
         'ecole_location',
         'ecole_phone',
     ];
+
+    public function facultes()
+    {
+        return $this->hasMany(Faculte::class);
+    }
+
+    public function publications()
+    {
+        return $this->hasMany(Publication::class);
+    }
 }

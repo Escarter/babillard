@@ -1,89 +1,77 @@
 <!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top  bd-navbar " id="mainNav">
-    <a class="navbar-brand text-warning  " href="/admin"> <i class="fa fa-user fa-2x"></i> <span class="ml-lg-1"> My Profile Admin</span></a>
+<nav class="navbar navbar-expand-lg bg-white fixed-top shadow  bd-navbar " id="mainNav">
+    <a class="navbar-brand text-primary  " href="/admin"> <img src="{{asset('img/babillardcm_logo.png')}}" class="m-0 p-0 " style="height:60px; width:auto"  alt="altText"/></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav navbar-sidenav pt-2 " id="exampleAccordion">
+        <ul class="navbar-nav navbar-sidenav pt-5 " id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-            <a class="nav-link text-warning" href="/admin">
+            <a class="nav-link text-primary" href="/admin">
             <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text text-warning">Dashboard</span>
+            <span class="nav-link-text text-primary">Dashboard</span>
             </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Department Management">
-            <a class="nav-link nav-link-collapse collapsed text-warning" data-toggle="collapse" href="#collapseDepartmentManagement" data-parent="#exampleAccordion">
+            <a class="nav-link nav-link-collapse collapsed text-primary" data-toggle="collapse" href="#collapseDepartmentManagement" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-wrench"></i>
-            <span class="nav-link-text text-warning"> Platform Management </span>
+            <span class="nav-link-text text-primary"> Platform Management </span>
             </a>
             <ul class="sidenav-second-level collapse" id="collapseDepartmentManagement">
                 <li>
-                    <a href="/admin/departments" class="text-warning">
+                    <a href="/admin/schools" class="text-primary">
+                        <i class="fa fa-fw  fa-th"></i>
+                        Ecoles
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/facultes" class="text-primary">
+                        <i class="fa fa-fw  fa-th"></i>
+                        Facultes
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/departments" class="text-primary">
                         <i class="fa fa-fw  fa-th"></i>
                         Departments
                     </a>
                 </li>
                 <li>
-                    <a class="text-warning" href="/admin/rejection-reasons">
-                        <i class="fa fa-fw fa-remove"></i>
-                        @lang('Rejection-Reasons')
+                    <a href="/admin/niveaux" class="text-primary">
+                        <i class="fa fa-fw  fa-th"></i>
+                        Niveau
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/filieres" class="text-primary">
+                        <i class="fa fa-fw  fa-th"></i>
+                        Filieres
                     </a>
                 </li>
             </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Users Management">
-            <a class="nav-link nav-link-collapse collapsed text-warning" data-toggle="collapse" href="#collapseUsersManagement" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-users text-warning"></i>
-            <span class="nav-link-text text-warning"> Users Management </span>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Publication Management">
+            <a class="nav-link nav-link-collapse collapsed text-primary" data-toggle="collapse" href="#collapsePublicationManagement" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-bullhorn text-primary"></i>
+            <span class="nav-link-text text-primary"> Publications Management </span>
             </a>
-            <ul class="sidenav-second-level collapse" id="collapseUsersManagement">
+            <ul class="sidenav-second-level collapse" id="collapsePublicationManagement">
                 <li>
-                    <a href="/admin/users" class="text-warning">
-                        <i class="fa fa-fw fa-users"></i>
-                        All Users
-                    </a>
-                </li>
-                <li>
-                    <a href="/admin/users/image-uploaded" class="text-warning">
-                        <i class="fa fa-fw fa-image"></i>
-                        Image Uploaded
-                    </a>
-                </li>
-                <li>
-                    <a href="/admin/users/image-not-uploaded" class="text-warning">
-                        <i class="fa fa-fw fa-remove"></i>
-                        Image Not Uploaded
-                    </a>
-                </li>
-                <li>
-                    <a href="/admin/users/image-pending" class="text-warning">
-                        <i class="fa fa-fw fa-calendar"></i>
-                        Image Pending
-                    </a>
-                </li>
-                <li>
-                    <a href="/admin/users/image-approved" class="text-warning">
-                        <i class="fa fa-fw fa-thumbs-up"></i>
-                        Image Approved
-                    </a>
-                </li>
-                <li>
-                    <a href="/admin/users/image-rejected" class="text-warning">
-                        <i class="fa fa-fw fa-thumbs-down"></i>
-                        Image  Rejected
+                    <a href="/admin/publications" class="text-primary">
+                        <i class="fa fa-fw fa-bullhorn"></i>
+                        Publications
                     </a>
                 </li>
             </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Reminder Management">
-            <a class="nav-link nav-link-collapse collapsed text-warning" data-toggle="collapse" href="#collapseReminderManagement" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-bell text-warning"></i>
-            <span class="nav-link-text text-warning"> Reminder Management </span>
+            <a class="nav-link nav-link-collapse collapsed text-primary" data-toggle="collapse" href="#collapseReminderManagement" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-bell text-primary"></i>
+            <span class="nav-link-text text-primary"> Reminder Management </span>
             </a>
             <ul class="sidenav-second-level collapse" id="collapseReminderManagement">
                 <li>
-                    <a href="/admin/users/reminder" class="text-warning">
+                    <a href="/admin/users/reminder" class="text-primary">
                         <i class="fa fa-fw fa-bell"></i>
                             Reminder
                     </a>
@@ -91,13 +79,13 @@
             </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Zipped Images Management">
-            <a class="nav-link nav-link-collapse collapsed text-warning" data-toggle="collapse" href="#collapsezippedImagesManagement" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-file-archive-o text-warning"></i>
-            <span class="nav-link-text text-warning"> Zipped Img Management </span>
+            <a class="nav-link nav-link-collapse collapsed text-primary" data-toggle="collapse" href="#collapsezippedImagesManagement" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-file-archive-o text-primary"></i>
+            <span class="nav-link-text text-primary"> Zipped Img Management </span>
             </a>
             <ul class="sidenav-second-level collapse" id="collapsezippedImagesManagement">
                 <li>
-                    <a href="/admin/zipped-imgs" class="text-warning">
+                    <a href="/admin/zipped-imgs" class="text-primary">
                         <i class="fa fa-fw fa-file-archive-o"></i>
                             Zipped Images
                     </a>
@@ -106,13 +94,13 @@
         </li>
 
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Audit Management">
-            <a class="nav-link nav-link-collapse collapsed text-warning" data-toggle="collapse" href="#collapseAuditManagement" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-file-code-o text-warning"></i>
-            <span class="nav-link-text text-warning"> Audit Trails Management </span>
+            <a class="nav-link nav-link-collapse collapsed text-primary" data-toggle="collapse" href="#collapseAuditManagement" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-file-code-o text-primary"></i>
+            <span class="nav-link-text text-primary"> Audit Trails Management </span>
             </a>
             <ul class="sidenav-second-level collapse" id="collapseAuditManagement">
                 <li>
-                    <a href="/admin/audit" class="text-warning">
+                    <a href="/admin/audit" class="text-primary">
                         <i class="fa fa-fw fa-file-code-o"></i>
                             User Audit
                     </a>
@@ -131,7 +119,7 @@
         <hr class=" hidden-md" >
         <ul class="navbar-nav ml-lg-auto mr-lg-3">
             <li class="nav-item dropdown  ">
-                <a class="nav-link dropdown-toggle  text-warning" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true"
+                <a class="nav-link dropdown-toggle  text-secondary" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
                     <i class="fa  fa-language"></i>
                 </a>
@@ -147,9 +135,9 @@
             </li>
         </ul>
         <li class="nav-item dropdown mr-lg-5">
-            <a class="nav-link dropdown-toggle  text-warning" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle  text-secondary" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                  <i class="fa  fa-user"></i>
-            <span class="indicator text-warning d-none d-lg-block">
+            <span class="indicator text-primary d-none d-lg-block">
                 {{--  <i class="fa fa-fw fa-circle"></i>  --}}
             </span>
             </a>

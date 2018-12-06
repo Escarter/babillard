@@ -19,11 +19,13 @@
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
   <style>
-    .content-wrapper,
     .card {
         margin: 0 auto !important; /* Added */
         float: none  !important; /* Added */
         margin-bottom: 10px  !important; /* Added */
+    }
+    body.sticky-footer {
+         margin-bottom: 0px !important;
     }
   </style>
 </head>
@@ -31,6 +33,7 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
 
   @yield('content')
+
   <a class="scroll-to-top rounded" href="#page-top">
          <i class="fa fa-angle-up"></i>
     </a>

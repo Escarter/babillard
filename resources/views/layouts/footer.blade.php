@@ -1,6 +1,5 @@
 {{-- Site Footer --}}
-<hr>
-<footer class="sticky-footer">
+<footer class="sticky-footer mt-0 pt-0">
     <div class="container">
         <div class="text-center">
             <small>Copyright © MTNC  {{Carbon\Carbon::now()->year}}</small>

@@ -21,7 +21,7 @@ class CreatePublicationsTable extends Migration
             $table->unsignedInteger('ecole_id')->nullable();
             $table->unsignedInteger('faculte_id')->nullable();
             $table->unsignedInteger('department_id')->nullable();
-            $table->unsignedInteger('noveau_id')->nullable();
+            $table->unsignedInteger('niveau_id')->nullable();
             $table->unsignedInteger('filiere_id')->nullable();
             $table->date('publication_date')->nullable();
             $table->date('publication_expiry_date')->nullable();

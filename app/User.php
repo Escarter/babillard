@@ -53,4 +53,14 @@ class User extends Authenticatable
 
         return false;
     }
+
+    public function getFullName()
+    {
+        return $this->first_name.' '.$this->last_name;
+    }
+
+    public function publications()
+    {
+        return $this->hasMany(Publication::class);
+    }
 }

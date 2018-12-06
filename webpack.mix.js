@@ -11,7 +11,7 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js(['resources/libs/jquery/dist/jquery.min.js',
+mix.js([ "resources/libs/admin/jquery/jquery.min.js",
         'resources/libs/popper/popper.min.js',
         'resources/libs/bootstrap/dist/js/bootstrap.min.js'
     ], 'public/js/app.js')
@@ -21,13 +21,14 @@ mix.js(['resources/libs/jquery/dist/jquery.min.js',
         "resources/libs/admin/datatables/datatables.css",
         "resources/libs/admin/font-awesome/css/font-awesome.css",
         "resources/libs/admin/toastr/build/toastr.min.css",
-        "resources/libs/admin/dist/css/sb-admin.css",
+        "resources/libs/admin/dist/css/sb-admin.min.css",
         "resources/libs/admin/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.min.css",
         "resources/libs/admin/bootstrap-datepicker/css/daterangepicker.css",
     ], "public/css/admin.css")
     .scripts([
         "resources/libs/admin/jquery/jquery.min.js",
-        "resources/libs/admin/bootstrap/js/bootstrap.bundle.min.js",
+        'resources/libs/popper/popper.min.js',
+        'resources/libs/bootstrap/dist/js/bootstrap.min.js',
         "resources/libs/admin/bootstrap-datepicker/js/bootstrap-datepicker.min.js",
         "resources/libs/admin/bootstrap-datepicker/js/moment.min.js",
         "resources/libs/admin/bootstrap-datepicker/js/daterangepicker.min.js",
@@ -36,6 +37,6 @@ mix.js(['resources/libs/jquery/dist/jquery.min.js',
         "resources/libs/admin/toastr/build/toastr.min.js",
         "resources/libs/admin/sweetalert/dist/sweetalert.min.js",
         "resources/libs/admin/chart.js/Chart.js",
-        "resources/libs/admin/dist/js/sb-admin.js",
+        "resources/libs/admin/dist/js/sb-admin.min.js",
   ],
   "public/js/admin.js");

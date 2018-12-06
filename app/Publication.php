@@ -20,4 +20,34 @@ class Publication extends Model
         'publication_date',
         'publication_expiry_date',
     ];
+
+    public function ecole()
+    {
+        return $this->belongsTo(Ecole::class);
+    }
+
+    public function faculte()
+    {
+        return $this->belongsTo(Faculte::class);
+    }
+
+    public function department()
+    {
+        return $this->belongsTo(Department::class);
+    }
+
+    public function niveau()
+    {
+        return $this->belongsTo(Niveau::class);
+    }
+
+    public function filiere()
+    {
+        return $this->belongsTo(Filiere::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
