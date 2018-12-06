@@ -59,6 +59,11 @@ class User extends Authenticatable
         return $this->first_name.' '.$this->last_name;
     }
 
+    public function ecole()
+    {
+        return $this->belongsTo(Ecole::class);
+    }
+
     public function publications()
     {
         return $this->hasMany(Publication::class);

@@ -1,20 +1,21 @@
-t<?php
+<?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDepartmentsTable extends Migration
+class CreateActivityLogsTable extends Migration
 {
     /**
      * Run the migrations.
      */
     public function up()
     {
-        Schema::create('departments', function (Blueprint $table) {
+        Schema::create('activity_logs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('department_name');
-            $table->unsignedInteger('faculte_id')->nullabl();
+            $table->string('logger');
+            $table->string('log_action');
+            $table->text('log_message');
             $table->timestamps();
         });
     }
@@ -24,6 +25,6 @@ class CreateDepartmentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('departments');
+        Schema::dropIfExists('activity_logs');
     }
 }

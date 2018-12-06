@@ -20,19 +20,21 @@
         <div class="clearfix"></div>
     </div>
     <div class="card-body">
-        @include('layouts.notifications')
         @if ($publications->count()>0)
         <div class="table-responsive">
             <table width="100%"  class="table table-bordered table-hover dataTables-deprt">
                 <thead class="thead-light">
                     <tr>
-                        <th>{{ __('Publication Ecole')}}</th>
                         <th>{{ __('Publication User')}}</th>
-                        <th>{{ __('Publication Name')}}</th>
                         <th>{{ __('Publication Type')}}</th>
                         <th>{{ __('Publication Description')}}</th>
                         <th>{{ __('Publication File')}}</th>
                         <th>{{ __('Publication Target')}}</th>
+                        <th>{{ __('Publication school')}}</th>
+                        <th>{{ __('Publication faculte')}}</th>
+                        <th>{{ __('Publication department')}}</th>
+                        <th>{{ __('Publication niveau')}}</th>
+                        <th>{{ __('Publication filiere')}}</th>
                         <th>{{ __('Publication Date')}}</th>
                         <th>{{ __('Expiry Date')}}</th>
                         <th>{{ __('Action')}}</th>
@@ -41,20 +43,17 @@
                 <tbody>
                     @foreach ($publications as $publication )
                     <tr >
-                        <td>{{$publication->ecole->ecole_name}}</td>
                         <td>{{$publication->user->getFullName()}}</td>
-                        <td>{{$publication->publication_name}}</td>
-                        <td>{{$publication->publication_type}}</td>
+                        <td>{{$publication->department->publication_type}}</td>
                         <td>{{$publication->publication_description}}</td>
-                        <td><a href="{{$publication->publication_file_path}}" class="btn btn-minor btn-sm" target="_blank" ><i class="fa fa-eye"></i></a></td>
-                        <td>
-                            @if($publication->publication_target == "internal")
-                            <span class="badge badge-primary">Internal</span>
-                            @else
-                            <span class="badge badge-secondary">External</span>
-                            @endif
-                        </td>
-                        <td>{{$publication->created_at}}</td>
+                        <td><a href="{{$publication->publication_file_path}}">{{$publication->publication_type}}</a></td>
+                        <td>{{$publication->publication_target}}</td>
+                        <td>{{$publication->ecole->ecole_name}}</td>
+                        <td>{{$publication->faculte->faculte_name}}</td>
+                        <td>{{$publication->department->department_name}}</td>
+                        <td>{{$publication->niveau->niveau_name}}</td>
+                        <td>{{$publication->filiere->filiere_name}}</td>
+                        <td>{{$publication->publication_date}}</td>
                         <td>{{$publication->publication_expiry_date}}</td>
                         <td>
                             <button   title="{{ __('Edit Publication details') }}" data-id="" data-url="/admin/publication/{{$publication->id}}/edit" data-toggle="modal" data-target="#editPublicationModal" class="btn btn-secondary btn-sm"><i class="fa fa-pencil "></i></button>
@@ -102,11 +101,8 @@ $(document).ready(function() {
                 console.log(response)
                 if(response.status == 'success') {
                     editPublicationModal.find('input[name="id"]').val(response.data.id)
-                    editPublicationModal.find('input[name="publication_name"]').val(response.data.publication_name)
-                    editPublicationModal.find('textarea[name="publication_description"]').val(response.data.publication_description)
-                    editPublicationModal.find('input[name="publication_expiry_date"]').val(response.data.publication_expiry_date)
-                    editPublicationModal.find('select[name="publication_type"]').val(response.data.publication_type).trigger('change');
-                    editPublicationModal.find('select[name="publication_target"]').val(response.data.publication_target).trigger('change');
+                    editPublicationModal.find('input[name="Publication_name"]').val(response.data.Publication_name)
+                    editPublicationModal.find('select[name="department_id"]').val(response.data.department_id).trigger('change');
                 }
                 if(response.status =='error'){
                     toastr.warning(response.data,"{__('Oops Something is not alright') }}");

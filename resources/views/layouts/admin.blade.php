@@ -42,6 +42,9 @@
   <script src="{{ asset('js/sumit-form.js') }}"></script>
   <script>
     $(document).ready(function(){
+        $('.datepicker').datepicker({
+          autoclose:true,
+         });
 
          $('form[data-autosubmit]').autosubmit();
 
@@ -76,7 +79,7 @@
         "debug": false,
         "newestOnTop": false,
         "progressBar": true,
-        "positionClass": "toast-bottom-right",
+        "positionClass": "toast-top-right",
       }
       if(sessionStorage.getItem("success") ){
           toastr.success(sessionStorage.getItem("success"),"@lang('Great Job')")

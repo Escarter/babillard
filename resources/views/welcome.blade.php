@@ -1,98 +1,86 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.auth')
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <img src="/img/babillardcm_logo.png" class="img-fluid" alt="">
+                    <p class=" m-2  text-center text-secondary" style="font-size:1.7rem !important;" >Site will be available in</p>
+                    <h1 id="counter" class=" m-2  text-center" style="font-size:4.7rem !important;"></h1>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+</div>
+@endsection
+
+@section('script')
+<script>
+//Get the server time
+var xmlHttp;
+function srvTime(){
+    try {
+        //FF, Opera, Safari, Chrome
+        xmlHttp = new XMLHttpRequest();
+    }
+    catch (err1) {
+        //IE
+        try {
+            xmlHttp = new ActiveXObject('Msxml2.XMLHTTP');
+        }
+        catch (err2) {
+            try {
+                xmlHttp = new ActiveXObject('Microsoft.XMLHTTP');
+            }
+            catch (eerr3) {
+                //AJAX not supported, use CPU time.
+                alert("AJAX not supported");
+            }
+        }
+    }
+    xmlHttp.open('HEAD',window.location.href.toString(),false);
+    xmlHttp.setRequestHeader("Content-Type", "text/html");
+    xmlHttp.send('');
+    return xmlHttp.getResponseHeader("Date");
+}
+
+
+    var myDate="07-01-2019";
+    myDate=myDate.split("-");
+    var newDate=myDate[1]+","+myDate[0]+","+myDate[2];
+
+    // Set the date we're counting down to
+    var countDownDate = new Date(newDate).getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+        var st = srvTime();
+        // Get todays date and time
+        var now = new Date(st).getTime();
+        // console.log(now)
+
+        // Find the distance between now an the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        document.getElementById("counter").innerHTML = days + "d:  " + hours + "h: " +
+            minutes + "m:  " + seconds + "s  ";
+
+        // // If the count down is over, write some text
+        // if (distance < 0) {
+        //     //clearInterval(x);
+        //     location.href = '/employee/dashboard';
+        //     document.getElementById("counter").innerHTML = "Redirect....";
+        // }
+    }, 1000);
+</script>
+@stop

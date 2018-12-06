@@ -64,56 +64,6 @@
                 </li>
             </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Reminder Management">
-            <a class="nav-link nav-link-collapse collapsed text-primary" data-toggle="collapse" href="#collapseReminderManagement" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-bell text-primary"></i>
-            <span class="nav-link-text text-primary"> Reminder Management </span>
-            </a>
-            <ul class="sidenav-second-level collapse" id="collapseReminderManagement">
-                <li>
-                    <a href="/admin/users/reminder" class="text-primary">
-                        <i class="fa fa-fw fa-bell"></i>
-                            Reminder
-                    </a>
-                </li>
-            </ul>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Zipped Images Management">
-            <a class="nav-link nav-link-collapse collapsed text-primary" data-toggle="collapse" href="#collapsezippedImagesManagement" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-file-archive-o text-primary"></i>
-            <span class="nav-link-text text-primary"> Zipped Img Management </span>
-            </a>
-            <ul class="sidenav-second-level collapse" id="collapsezippedImagesManagement">
-                <li>
-                    <a href="/admin/zipped-imgs" class="text-primary">
-                        <i class="fa fa-fw fa-file-archive-o"></i>
-                            Zipped Images
-                    </a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Audit Management">
-            <a class="nav-link nav-link-collapse collapsed text-primary" data-toggle="collapse" href="#collapseAuditManagement" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-file-code-o text-primary"></i>
-            <span class="nav-link-text text-primary"> Audit Trails Management </span>
-            </a>
-            <ul class="sidenav-second-level collapse" id="collapseAuditManagement">
-                <li>
-                    <a href="/admin/audit" class="text-primary">
-                        <i class="fa fa-fw fa-file-code-o"></i>
-                            User Audit
-                    </a>
-                </li>
-            </ul>
-        </li>
-        </ul>
-        <ul class="navbar-nav sidenav-toggler">
-        <li class="nav-item">
-            <a class="nav-link " id="sidenavToggler">
-            <i class="fa fa-fw fa-angle-left"></i>
-            </a>
-        </li>
         </ul>
         <ul class="navbar-nav ml-auto mr-lg-5" >
         <hr class=" hidden-md" >

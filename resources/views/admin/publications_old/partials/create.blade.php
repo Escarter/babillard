@@ -8,7 +8,7 @@
                 </button>
             </div>
             <div class="modal-body p-4">
-                <form id="depart-form" method="POST" action="/admin/publications" enctype="multipart/form-data" >
+                <form id="depart-form" method="POST" action="/admin/publications" data-autosubmit>
                     @include('admin.publications.partials._form')
             </div>
             <div class="modal-footer">

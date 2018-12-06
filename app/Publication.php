@@ -3,23 +3,24 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Publication extends Model
 {
+    use SoftDeletes;
     protected $fillable = [
         'user_id',
+        'ecole_id',
+        'publication_name',
         'publication_type',
         'publication_description',
         'publication_file_path',
         'publication_target',
-        'ecole_id',
-        'faculte_id',
-        'department_id',
-        'noveau_id',
-        'filiere_id',
         'publication_date',
         'publication_expiry_date',
+        'publication_status',
     ];
+    protected $dates = ['deleted_at'];
 
     public function ecole()
     {
